@@ -17,7 +17,7 @@ var jwtKey = []byte("chrombit2020")
 
 func main() {
 	router.POST("/login", Login)
-	log.Fatal(router.Run(":1111"))
+	log.Fatal(router.Run(":8080"))
 }
 
 type User struct {
@@ -31,8 +31,8 @@ type Claims struct {
 }
 
 var user = User{
-	Username: "admin",
-	Password: "root",
+	Username: "root",
+	Password: "1234567",
 }
 
 func Login(c *gin.Context) {
